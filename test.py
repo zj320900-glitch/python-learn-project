@@ -1,14 +1,6 @@
-import os
-current_directory = os.getcwd()
-print ("当前工作目录", current_directory)
-os.chdir("/root/test/")
-print ("新的工作目录：", os.getcwd())
-files_and_dirs = os.listdir()
-print ("目录内容：",files_and_dirs)
-#os.mkdir("new_directory")
-#os.rmdir("new_directory")
-#os.remove("file_to_delete.txt")
-#os.rename("old_name.txt", "new_name.txt")
-home_diretory = os.getenv("HOME")
-print ("HOME 目录：", home_diretory)
-os.system("ls -l")
+a = 10
+def test(a):
+    a += 1
+    print (a)
+test(a)
+print (a)
