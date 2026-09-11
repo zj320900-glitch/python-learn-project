@@ -68,3 +68,36 @@ if __name__ == "__main__":
 
 print ("------------")
 
+class JustCounter:
+    __secrestCount = 0
+    publicCount = 0
+    def count(self):
+        self.__secrestCount += 1
+        self.publicCount += 1
+        print (self.__secrestCount)
+counter = JustCounter()
+counter.count()
+print (counter.publicCount)
+#print (counter.__secrestCount) #私有变量外部不能访问
+
+print ("---------")
+class Site:
+    def __init__(self, name, url):
+        self.name = name
+        self.__url = url
+    def who(self):
+        print ("name :", self.name)
+        print ("url :", self.__url)
+    def __foo(self):
+        print ("这是私有方法")
+    def foo(self):
+        print ("这是公共方法")
+        self.__foo()
+
+x = Site ("菜鸟教程", "www.runoob.com")
+x.who()
+x.foo()
+#x.__foo()  #会报错
+
+
+
