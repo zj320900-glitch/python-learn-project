@@ -18,5 +18,3 @@ b = float(input("请输入b地值，并以enter键结束："))
 change_number(a, b)
 change_number1(a, b)
 
-c = input("1:")
-float(c)
